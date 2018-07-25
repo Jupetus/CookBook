@@ -1,0 +1,73 @@
+\documentclass[%
+a4paper,
+%twoside,
+11pt
+]{article} 
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{lmodern}
+\usepackage[ngerman, english]{babel}
+
+\usepackage{nicefrac}
+
+\usepackage{xcookybooky}
+ 
+\usepackage{blindtext}    % only needed for generating test text
+
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Sven Harder},
+    pdftitle             = {Example Recipes for xcookybooky},
+    pdfsubject           = {Recipes},
+    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+\begin{document}
+
+\title{A collection of the best \textbf{Cathy} recipes}
+\maketitle
+
+\begin{abstract}
+    \noindent \textbf{For those who we miss cooking with and whom we want to share one more meal with.} Includes mostly stuff that is coloured green.
+\end{abstract}
+
+\tableofcontents
+
+\pagebreak
+
+\section{Sweet stuff}
+Recipes here are meant to be enjoyed as snacks and dessert
+
+
+\include{tex/finnishpancake}
+
+\section{Lunch time}
+Recipes here are more filling and can make good lunch and dinner. Impress your friends or loved one.
+
+\include{tex/okonomiyaki}
+
+\end{document} 
